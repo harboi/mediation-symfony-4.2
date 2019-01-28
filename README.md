@@ -3,7 +3,7 @@
 
 ### TODO :
 - créer la trame graphique **[in progress]**
-- installer & configurer la base de données
+- ~~installer & configurer la base de données~~
 - mettre en place le contexte de sécurité
 - créer les entités & repositories (+ exceptions)
 - mettre en place le backoffice (gestion de l'entité Publication)
