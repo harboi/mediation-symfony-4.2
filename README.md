@@ -2,10 +2,10 @@
 ##### Private project for a lawyer/mediator (unis-vers-mediation.fr)
 
 ### TODO :
-- créer la trame graphique **[in progress]**
+- créer la trame graphique **[in progress 50%]**
 - ~~installer & configurer la base de données~~
 - mettre en place le contexte de sécurité
-- créer les entités & repositories (+ exceptions)
+- créer les entités & repositories (+ exceptions) **[in progress]**
 - mettre en place le backoffice (gestion de l'entité Publication)
 - AU MENU :
   - PAGE D’ACCUEIL (dynamique)
