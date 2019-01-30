@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{% block title %}Unis Vers Médiation{% endblock %}</title>
+    <!-- Bootstrap -->
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet">
+    {% block css %}{% endblock %}
+</head>
+<body>
+<div class="body">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand hidden-sm" href="{{ path('homepage') }}"><img src="{{ asset('images/logo-mediation.png') }}" class="img-responsive navbar-logo" alt="Médiation"></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ path('index') }}">ACCUEIL</a></li>
+                    <li><a href="{{ path('mediateur') }}">VOTRE MEDIATEUR</a></li>
+                    <li><a href="{{ path('mediation-vs-procedure-judiciaire') }}">MEDIATION VERSUS PROCEDURE JUDICIAIRE</a></li>
+                    <li><a href="{{ path('particulier') }}">ESPACE PARTICULIER</a></li>
+                    <li><a href="{{ path('entreprise') }}">ESPACE ENTREPRISE</a></li>
+                    <li><a href="{{ path('publications') }}">PUBLICATIONS</a></li>
+                    <li><a href="{{ path('honoraires') }}">HONORAIRES</a></li>
+                    <li><a href="{{ path('contact') }}">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row banner">
+            <img src="{{ asset('images/bandeau-index.jpg') }}" alt="" width="100%">
+        </div>
+    </div>
+
+
+    {% block content %}{% endblock %}
+
+</div>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <p class="dash"></p>
+                <h4><span class="glyphicon glyphicon-link" aria-hidden="true"></span> Navigation</h4>
+                <ul>
+                    <li><a href="{{ path('index') }}">ACCUEIL</a></li>
+                    <li><a href="{{ path('mediateur') }}">VOTRE MEDIATEUR</a></li>
+                    <li><a href="{{ path('mediation-vs-procedure-judiciaire') }}">MEDIATION VERSUS PROCEDURE JUDICIAIRE</a></li>
+                    <li><a href="{{ path('particulier') }}">ESPACE PARTICULIER</a></li>
+                    <li><a href="{{ path('entreprise') }}">ESPACE ENTREPRISE</a></li>
+                    <li><a href="{{ path('publications') }}">PUBLICATIONS</a></li>
+                    <li><a href="{{ path('honoraires') }}">HONORAIRES</a></li>
+                    <li><a href="{{ path('contact') }}">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-4">
+                <p class="dash"></p>
+                <h4><span class="glyphicon glyphicon-phone-alt" aria-hidden="true"></span> Téléphone</h4>
+                <blockquote><strong>Secrétariat</strong>
+                    <br>05 53 05 17 00
+                    <br><strong>Ligne mobile directe</strong>
+                    <br>06 18 24 27 30
+                </blockquote>
+
+                <h4><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> eMail</h4>
+                <blockquote><a href="mailto:davidcorvee@gmail.com">davidcorvee@gmail.com</a>
+                </blockquote>
+
+            </div>
+
+            <div class="col-sm-4">
+                <p class="dash"></p>
+                <h4><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Adresse du Cabinet</h4>
+                <blockquote>13 Rue Guynemer
+                    <br/>24000 PERIGUEUX
+                </blockquote>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5623.992262282754!2d0.7159395161989744!3d45.18717455990521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ff7100f9ba4bc1%3A0x26c8eafd78b97f2b!2s13+Rue+Guynemer%2C+24000+P%C3%A9rigueux%2C+France!5e0!3m2!1sfr!2sus!4v1444783133396" width="99%" height="200" frameborder="0" style="border:0"></iframe>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('js/jquery.matchHeight-min.js') }}"></script>
+<script src="{{ asset('js/Hyphenator_Loader.js') }}"></script>
+<script>
+    $(function() {
+        $('.matchHeight').matchHeight({
+            byRow: true,
+            property: 'height',
+            target: null,
+            remove: false
+        });
+
+        Hyphenator_Loader.init(
+            { "fr": "automatically"},
+            "{{ asset('js/Hyphenator.min.js') }}",
+            { classname : 'text-justify'}
+        );
+    });
+</script>
+{% block js %}{% endblock %}
+</body>
+</html>
