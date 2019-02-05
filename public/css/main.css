@@ -32,14 +32,15 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 
 .navbar .navbar-nav > li > a {
-    padding: 50px 17px;
+    padding: 20px 10px;
     margin: 0;
     font-size: 110%;
     font-weight: bold;
 }
 
 .navbar .navbar-nav > li > a:hover {
-    background: #eaeaea;
+    background: #2c476d;
+    color: white;
 }
 
 button.navbar-toggle {
