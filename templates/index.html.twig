@@ -4,13 +4,19 @@
     <div class="container">
         <div class="row title">
             <div class="col-md-12 center-block">
+                <br>
                 <h3 class="text-center">La médiation au service des particuliers et des entreprises</h3>
             </div>
         </div>
+    </div>
 
-        <div class="row well" style="padding-bottom: 0;">
-            <div class="col-sm-12 well">
-                <p class="lead text-justify">
+    <div class="container-fluid bg-cover" style="background-image: url({{ asset('images/bandeau1.jpg') }})"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 ">
+                <br>
+                <p class="lead text-justify well">
                     <strong>PREVENIR et RESOUDRE amiablement vos conflits grâce à la médiation</strong>
                     <br>
                     <br>
@@ -68,40 +74,46 @@
         </div>
 
         <div class="row">
-            <h4 class="text-center">À qui s'adresse la médiation ?</h4>
+            <h4 class="text-center blue-violet">À qui s'adresse la médiation ?</h4>
 
-            <strong>VOUS ETES UNE ENTREPRISE :</strong>[click-to-display]
+            <a href="javascript:$('#entreprise').collapse('toggle');"><strong>VOUS ETES UNE ENTREPRISE :
+                </strong> [click-to-display+trouver-icon]</a>
             <br>
-            La médiation permet de régler :
-            <br>
-            <ul>
-                <li>des conflits internes à l'entreprise (conflits entre associés, mésentente au sein d'un
-                    service…)
-                </li>
-                <li>des conflits externes à l'entreprises, par exemple avec un client ou un partenaire commercial
-                    (factures impayées, rupture des relations commerciales…)
-                </li>
-            </ul>
-            La médiation est un gain de temps - et donc de productivité - et permet d'aboutir à des solutions
-            apaisées dans un cadre strictement confidentiel qui préserve l'image de l'entreprise.
-            <br>
-            <a href="#">En savoir plus</a>
+            <div id="entreprise" class="collapse well" style="padding-bottom: 0 !important;">
+                La médiation permet de régler :
+                <br>
+                <ul>
+                    <li>des conflits internes à l'entreprise (conflits entre associés, mésentente au sein d'un
+                        service…)
+                    </li>
+                    <li>des conflits externes à l'entreprises, par exemple avec un client ou un partenaire commercial
+                        (factures impayées, rupture des relations commerciales…)
+                    </li>
+                </ul>
+                La médiation est un gain de temps - et donc de productivité - et permet d'aboutir à des solutions
+                apaisées dans un cadre strictement confidentiel qui préserve l'image de l'entreprise.
+                <br>
+                <a href="#">En savoir plus</a>
+            </div>
+
 
             <br>
             <br>
 
-            <strong>VOUS ETES UN PARTICULIER :</strong>[click-to-display]
+            <a href="javascript:$('#particulier').collapse('toggle');"><strong>VOUS ETES UN PARTICULIER :</strong>[click-to-display+trouver-icon]</a>
             <br>
-            Vous pouvez faire appel à un médiateur pour tout type de conflit né ou susceptible de naître :
-            <br>
-            <ul>
-                <li>conflits familiaux (séparation, divorce, succession…)</li>
-                <li>conflits de voisinage</li>
-                <li>conflits avec un professionnel</li>
-                <li>conflits avec votre propriétaire ou avec votre locataire</li>
-                <li>...</li>
-            </ul>
-            <a href="#">En savoir plus</a>
+            <div id="particulier" class="collapse well">
+                Vous pouvez faire appel à un médiateur pour tout type de conflit né ou susceptible de naître :
+                <br>
+                <ul>
+                    <li>conflits familiaux (séparation, divorce, succession…)</li>
+                    <li>conflits de voisinage</li>
+                    <li>conflits avec un professionnel</li>
+                    <li>conflits avec votre propriétaire ou avec votre locataire</li>
+                    <li>...</li>
+                </ul>
+                <a href="#">En savoir plus</a>
+            </div>
         </div>
 
         <div class="row">
