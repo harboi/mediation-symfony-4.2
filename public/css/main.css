@@ -1,0 +1,164 @@
+html, body {
+    height: 100%;
+}
+body {
+    margin-top: 0;
+}
+div.body {
+    min-height: 100%;
+}
+h1, .h1, h2, .h2, h3, .h3 {
+    margin:10px;
+}
+.navbar {
+    margin:0;
+}
+
+.navbar-header {
+    height: 120px;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.navbar-logo {
+    height: 120px;
+    margin-left: 50px;
+}
+
+.navbar .navbar-nav>li>a {
+    padding: 50px 17px;
+    margin:0;
+    font-size: 110%;
+    font-weight: bold;
+}
+.navbar .navbar-nav>li>a:hover {
+    background: #eaeaea;
+}
+
+.row.banner {
+    position: relative;
+}
+
+.inner-banner {
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    color:white;
+    margin-left:5%;
+    font-size:2.5rem;
+    text-shadow: 0 0 2px black;
+    /*background: rgba(255, 255, 255, 0.7);*/
+}
+
+.inner-portrait {
+    -ms-transform: translateY(-30%); /* IE 9 */
+    -webkit-transform: translateY(-30%); /* Chrome, Safari, Opera */
+    transform: translateY(-30%);
+    margin-left:30px;
+    max-height: 155px;
+}
+
+.row {
+    margin-bottom: 40px;
+}
+
+.matchHeight p.well {
+    height:100%;
+}
+
+footer {
+    background-color: #2c476d;
+    box-shadow: 0 0 10px #ededed;
+    padding-top: 30px;
+}
+
+footer .dash {
+    width:90px;
+    border-bottom:3px solid #dcdcdc;
+    margin:20px 0;
+}
+
+footer a, footer blockquote {
+    color: lightgray;
+}
+
+footer h4 {
+    color: white;
+}
+
+.font-size-17px {
+    font-size: 17px;
+}
+
+.david-corvee {
+    font-size: 120%;
+}
+
+/* Large desktops and laptops */
+@media (min-width: 1200px) {
+
+}
+
+/* Landscape tablets and medium desktops */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Portrait tablets and small desktops */
+@media (min-width: 768px) and (max-width: 991px) {
+    h1.h2 {
+        font-size: 36px;
+    }
+    .inner-banner {
+        font-size:2rem;
+    }
+}
+
+/* Landscape phones and portrait tablets */
+@media (max-width: 767px) {
+    .navbar-logo {
+        height: 65px;
+        margin-left: 10px;
+    }
+    .navbar .navbar-nav>li>a {
+        padding: 10px 10px;
+        margin:0;
+    }
+    .inner-banner {
+        font-size:1.5rem;
+    }
+}
+
+/* Portrait phones and smaller */
+@media (max-width: 480px) {
+
+}
+
+blockquote {
+    margin-left:5px;
+}
+
+.text-justify, .hyphenate {
+    text-align:justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+}
+
+@media (max-width: 9999px) {
+    .navbar-collapse.collapse {
+        display: none !important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block !important;
+    }
+    .navbar-header .collapse, .navbar-toggle {
+        display:block !important;
+    }
+    .navbar-header {
+        float:none;
+    }
+}
