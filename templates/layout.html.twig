@@ -12,7 +12,6 @@
     {% block css %}{% endblock %}
 </head>
 <body>
-<div class="body">
     <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
@@ -39,16 +38,7 @@
         </div>
     </nav>
 
-    <div class="container-fluid">
-        <div class="row banner">
-            <img src="{{ asset('images/bandeau-index.jpg') }}" alt="" width="100%">
-        </div>
-    </div>
-
-
     {% block content %}{% endblock %}
-
-</div>
 
 <footer>
     <div class="container">
