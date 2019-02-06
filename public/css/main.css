@@ -44,11 +44,11 @@ h1, .h1, h2, .h2, h3, .h3 {
 }
 
 button.navbar-toggle {
-    padding: 40px;
+    margin-top: 40px;
 }
 
 button.navbar-toggle:hover {
-    background-color: #2c476d;
+    border-color: #2c476d !important;
 }
 
 .blue-violet {
@@ -183,6 +183,14 @@ blockquote {
 }
 
 @media (max-width: 9999px) {
+    .navbar .navbar-nav > li   {
+        float: none !important;
+    }
+    .navbar .navbar-nav > li > a {
+        display: block;
+        text-align: center;
+    }
+
     .navbar-collapse.collapse {
         display: none !important;
     }
@@ -195,7 +203,7 @@ blockquote {
         display: block !important;
     }
 
-    .navbar-header {
-        float: none;
+    .navbar-header, .navbar-nav {
+        float: none !important;
     }
 }
