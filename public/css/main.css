@@ -51,6 +51,10 @@ button.navbar-toggle:hover {
     border-color: #2c476d !important;
 }
 
+.big {
+    font-size: 150%;
+}
+
 .blue-violet {
     color: #2c476d;
 }

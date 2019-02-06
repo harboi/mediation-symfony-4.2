@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-sm-12 ">
                 <br>
-                <p class="lead text-justify well">
+                <p class="lead text-justify">
                     <strong>PREVENIR et RESOUDRE amiablement vos conflits grâce à la médiation</strong>
                     <br>
                     <br>
@@ -74,12 +74,12 @@
         </div>
 
         <div class="row">
-            <h4 class="text-center blue-violet">À qui s'adresse la médiation ?</h4>
+            <h3 class="text-center blue-violet">À qui s'adresse la médiation ?</h3>
 
-            <a href="javascript:$('#entreprise').collapse('toggle');"><strong>VOUS ETES UNE ENTREPRISE :
+            <a href="javascript:$('#entreprise').collapse('toggle');"><strong class="big">VOUS ETES UNE ENTREPRISE :
                 </strong> [click-to-display+trouver-icon]</a>
             <div id="entreprise" class="collapse">
-                <div class="well">
+                <div class="lead well">
                     La médiation permet de régler :
                     <br>
                     <ul>
@@ -101,10 +101,11 @@
             <br>
             <br>
 
-            <a href="javascript:$('#particulier').collapse('toggle');"><strong>VOUS ETES UN PARTICULIER :</strong>[click-to-display+trouver-icon]</a>
+            <a href="javascript:$('#particulier').collapse('toggle');"><strong class="big">VOUS ETES UN
+                    PARTICULIER :</strong> [click-to-display+trouver-icon]</a>
             <br>
-            <div id="particulier" class="collapse well">
-                <div class="well">
+            <div id="particulier" class="collapse">
+                <div class="lead well">
                     Vous pouvez faire appel à un médiateur pour tout type de conflit né ou susceptible de naître :
                     <br>
                     <ul>
@@ -120,32 +121,52 @@
         </div>
 
         <div class="row">
-            <h4 class="text-center">QUAND mettre en œuvre une mesure de médiation ?</h4>
-
-            Il n'est pas nécessaire d'attendre que le conflit soit installé pour envisager une mesure médiation.
-            Au contraire, la médiation peut vous permettre de PREVENIR un éventuel conflit.
-            Par ailleurs, la saisine d'un Juge ne fait pas obstacle à la mise en œuvre d'une mesure de médiation.
-            Elle pourra même être ordonnée par ce juge avec l'accord des parties : on parle alors de médiation
-            judiciaire.
-            <br>
-            On la distingue de la médiation conventionnelle qui peut être mise en œuvre par les parties en
-            dehors de toute procédure judiciaire.
-
-            <br>
-            <br>
-            <br>
-            <br>
-
-            <h4 class="text-center">COMMENT mettre en œuvre une mesure de médiation ?</h4>
-
-            Rien de plus simple.
-            <br>
-            Vous prenez contact avec moi, par téléphone ou par écrit, et nous convenons ensemble d'un rendez-
-            vous.
-            <br>
-            Je me charge ensuite, avec votre accord, de proposer la mesure de médiation à l'autre partie.
-            <br>
+            <h3 class="text-center">QUAND mettre en œuvre une mesure de médiation ?</h3>
+            <p class="lead text-justify">
+                Il n'est pas nécessaire d'attendre que le conflit soit installé pour envisager une mesure médiation.
+                Au contraire, la médiation peut vous permettre de PREVENIR un éventuel conflit.
+                Par ailleurs, la saisine d'un Juge ne fait pas obstacle à la mise en œuvre d'une mesure de médiation.
+                Elle pourra même être ordonnée par ce juge avec l'accord des parties : on parle alors de médiation
+                judiciaire.
+                <br>
+                On la distingue de la médiation conventionnelle qui peut être mise en œuvre par les parties en
+                dehors de toute procédure judiciaire.
+            </p>
         </div>
 
+        <div class="row">
+            <h3 class="text-center">COMMENT mettre en œuvre une mesure de médiation ?</h3>
+            <p class="lead text-justify">
+                Rien de plus simple.
+                <br>
+                Vous prenez contact avec moi, par téléphone ou par écrit, et nous convenons ensemble d'un rendez-
+                vous.
+                <br>
+                Je me charge ensuite, avec votre accord, de proposer la mesure de médiation à l'autre partie.
+            </p>
+        </div>
+        <div class="row">
+            <h3 class="text-center">Votre médiateur</h3>
+            <p class="lead text-justify">
+                <img class="img-thumbnail" style="width: 15%; min-width: 100px; float: right; margin-left: 20px;"
+                     src="{{ asset('images/david-corvee.jpg') }}" alt="David Corvée, votre médiateur">
+                Je suis médiateur <strong>inscrit officiellement auprès de la Cour d’appel de BORDEAUX.</strong>
+                <br>
+                <br>
+                Je suis diplômé de l’Institut de Formation à la Médiation et à la Négociation (IFOMENE) à PARIS et
+                adhérent de l’Association Nationale des Médiateurs (ANM).
+                <br>
+                <br>
+                En tant que médiateur, <strong><u>je suis indépendant, impartial et neutre par rapport à votre
+                        conflit.</u></strong>
+                <strong>En parallèle, j’exerce la profession d’avocat</strong> depuis le début de l’année 2013. Je
+                suis inscrit au Barreau de PERIGUEUX. Je suis en outre formé au processus collaboratif par
+                l’Association Française
+                des Praticiens du Droit Collaboratif (AFPDC)
+                <br>
+                <br>
+                <a href="{{ path('mediateur') }}">En savoir plus</a>
+            </p>
+        </div>
     </div>
 {% endblock %}
