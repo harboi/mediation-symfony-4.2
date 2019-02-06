@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+
 /**
  * @Route("/")
  */
@@ -24,7 +25,7 @@ class HomeController  extends AbstractController
      * @Route("/mediateur", name="mediateur")
      * @return Response
      */
-    public function mediateur()
+    public function mediateur(): Response
     {
         return $this->render('mediateur.html.twig');
     }
