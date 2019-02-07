@@ -36,7 +36,7 @@ class HomeController  extends AbstractController
      */
     public function mediationVsJudiciaire()
     {
-        return $this->render('mediation-vs-procedure-judiciaire.html.twig');
+        return $this->render('mediation-vs-judiciaire.html.twig');
     }
 
     /**
