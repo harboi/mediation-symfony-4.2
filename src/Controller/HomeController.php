@@ -40,12 +40,12 @@ class HomeController  extends AbstractController
     }
 
     /**
-     * @Route("/particulier", name="particulier")
+     * @Route("/espace-particulier", name="particulier")
      * @return Response
      */
     public function particulier()
     {
-        return $this->render('particulier.html.twig');
+        return $this->render('espace-particulier.html.twig');
     }
 
     /**
