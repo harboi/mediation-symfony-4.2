@@ -1,103 +1,118 @@
 {% extends "layout.html.twig" %}
 
 {% block content %}
-    <div class="container-fluid bg-cover" style="background-image: url({{ asset('images/bandeau4.jpg') }})"></div>
+    <div class="container-fluid bg-cover" style="height: 60% !important; background-image: url({{ asset('images/bandeau4.jpg') }})"></div>
 
     <div class="container-fluid container-grey padding-50">
         <div class="container">
+            <h3 class="text-center blue">La médiation s’adapte à votre conflit. Il n’y a donc pas de limite :
+                tout conflit, quel qu’il soit, est susceptible de faire l’objet d’une mesure de mediation.
+            </h3>
+
+            <br>
+            <br>
+            <br>
+
             <div class="row">
-                <h3 class="text-center blue">La médiation s’adapte à votre conflit. Il n’y a donc pas de limite :
-                    <strong><u>TOUT CONFLIT, QUEL QU’IL SOIT, EST SUSCEPTIBLE DE FAIRE L’OBJET D’UNE MESURE DE
-                            MEDIATION.</u></strong>
-                </h3>
-                <br>
-                <div class="lead text-justify">
-                    [TODO : 4 BULLES avec sur chaque bulle un pictogramme. Quand on clique sur la bulle, le texte
-                    s’affiche]
-                    <br>
-                    <br>
-                    <strong>CONFLITS FAMILIAUX (logo : pictogramme enfant avec parents)</strong>
-                    <br>
-                    Il s’agit évidemment d’un domaine d’élection privilégié de la médiation, les relations familiales
-                    étant le lieu de beaucoup d’affects. Qu’il s’agisse d’une séparation, d’un divorce ou même d’un
-                    différend de nature patrimoniale (liquidation de communauté, succession…), c’est toujours la
-                    relation qui est au centre du conflit.
-                    <ul>
-                        <li>divorce / séparation</li>
-                        <li>résidence de l’enfant / droit de visite et d’hébergement</li>
-                        <li>pension alimentaire</li>
-                        <li>problème d’indivision, de liquidation de communauté ou de succession</li>
-                        <li>rétablissement du lien parent /enfant</li>
-                        <li>…</li>
-                    </ul>
+                <div class="col-sm-6">
+                    <a href="javascript:$('#familiaux').collapse('toggle');">
+                        <i class="fas fa-users size400percent"></i>
+                        <strong class="big">CONFLITS FAMILIAUX</strong>
+                    </a>
+                    <div id="familiaux" class="collapse">
+                        <div class="lead well">
+                            Il s’agit évidemment d’un domaine d’élection privilégié de la médiation, les relations familiales
+                            étant le lieu de beaucoup d’affects. Qu’il s’agisse d’une séparation, d’un divorce ou même d’un
+                            différend de nature patrimoniale (liquidation de communauté, succession…), c’est toujours la
+                            relation qui est au centre du conflit.
+                            <ul>
+                                <li>divorce / séparation</li>
+                                <li>résidence de l’enfant / droit de visite et d’hébergement</li>
+                                <li>pension alimentaire</li>
+                                <li>problème d’indivision, de liquidation de communauté ou de succession</li>
+                                <li>rétablissement du lien parent /enfant</li>
+                                <li>…</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-sm-6">
+                    <a href="javascript:$('#voisin').collapse('toggle');">
+                        <i class="fas fa-user-friends size400percent"></i>
+                        <strong class="big">CONFLITS DE VOISINAGE</strong></a>
                     <br>
-                    <br>
-                    <br>
-                    <br>
+                    <div id="voisin" class="collapse">
+                        <div class="lead well">
+                            La médiation a évidemment toute son utilité en matière de conflits de voisinage, qu’il s’agisse d’un
+                            problème de servitude, de construction, de taille de végétaux... Sauf à se séparer de votre maison
+                            d’habitation, il est difficile de faire abstraction de votre voisin qui fait partie de votre
+                            quotidien.
+                            <br>
+                            La voie judiciaire est effectivement une solution, mais elle ne fera pas disparaître
+                            votre voisin… La médiation propose une autre approche qui pourrait vous permettre à la fois de
+                            régler votre conflit et de retrouver dans le même temps un cadre de vie apaisant, et ce, de façon
+                            pérenne.
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-                    <strong>CONFLITS DE VOISINAGE (pictogramme représentant des voisins, par exemple maison avec clôture)</strong>
-                    <br>
-                    La médiation a évidemment toute son utilité en matière de conflits de voisinage, qu’il s’agisse d’un
-                    problème de servitude, de construction, de taille de végétaux... Sauf à se séparer de votre maison
-                    d’habitation, il est difficile de faire abstraction de votre voisin qui fait partie de votre
-                    quotidien.
-                    <br>
-                    La voie judiciaire est effectivement une solution, mais elle ne fera pas disparaître
-                    votre voisin… La médiation propose une autre approche qui pourrait vous permettre à la fois de
-                    régler votre conflit et de retrouver dans le même temps un cadre de vie apaisant, et ce, de façon
-                    pérenne.
+            <div class="row">
+                <div class="col-sm-6">
+                    <a href="javascript:$('#pro').collapse('toggle');">
+                        <i class="fas fa-users size400percent"></i>
+                        <strong class="big">CONFLITS AVEC UN PROFESSIONNEL</strong>
+                    </a>
+                    <div id="pro" class="collapse">
+                        <div class="lead well">
+                            Les conflits que vous êtes susceptibles de rencontrer avec un professionnel sont multiples. Il est
+                            impossible d’en faire un inventaire exhaustif :
+                            <ul>
+                                <li>conflit avec une entreprise de construction qui paralyse votre chantier </li>
+                                <li>conflit avec un vendeur d’un bien quelconque</li>
+                                <li>conflit dans le cadre d’une copropriété</li>
+                                <li>conflit avec votre assureur, avec votre banque…</li>
+                                <li>conflit avec votre expert-comptable, avec votre agent immobilier…</li>
+                                <li>…</li>
+                            </ul>
+                            Quelle que soit la nature de votre conflit, vous pouvez faire appel à un médiateur afin de tenter de
+                            parvenir à une issue amiable. Si une juridiction est d’ores et déjà saisie de votre litige, vous
+                            pouvez solliciter du juge compétent qu’il ordonne une mesure de médiation, sous réserve que l’autre
+                            partie en soit d’accord.
+                        </div>
+                    </div>
+                </div>
 
+                <div class="col-sm-6">
+                    <a href="javascript:$('#locataire').collapse('toggle');">
+                        <i class="fas fa-user-friends size400percent"></i>
+                        <strong class="big">CONFLITS LOCATAIRE / PROPRIETAIRE</strong></a>
                     <br>
-                    <br>
-                    <br>
-                    <br>
-
-                    <strong>CONFLITS AVEC UN PROFESSIONNEL (pictogramme représentant un professionnel et un particulier)</strong>
-                    <br>
-                    Les conflits que vous êtes susceptibles de rencontrer avec un professionnel sont multiples. Il est
-                    impossible d’en faire un inventaire exhaustif :
-                    <ul>
-                        <li>conflit avec une entreprise de construction qui paralyse votre chantier </li>
-                        <li>conflit avec un vendeur d’un bien quelconque</li>
-                        <li>conflit dans le cadre d’une copropriété</li>
-                        <li>conflit avec votre assureur, avec votre banque…</li>
-                        <li>conflit avec votre expert-comptable, avec votre agent immobilier…</li>
-                        <li>…</li>
-                    </ul>
-                    Quelle que soit la nature de votre conflit, vous pouvez faire appel à un médiateur afin de tenter de
-                    parvenir à une issue amiable. Si une juridiction est d’ores et déjà saisie de votre litige, vous
-                    pouvez solliciter du juge compétent qu’il ordonne une mesure de médiation, sous réserve que l’autre
-                    partie en soit d’accord.
-
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-
-                    <strong>CONFLITS LOCATAIRE / PROPRIETAIRE (pictogramme représentatif)</strong>
-                    <br>
-                    Le contentieux locatif représente une part importante des dossiers dont sont saisis les Tribunaux
-                    d’instance.
-                    <br>
-                    <br>
-                    La longueur de la procédure judiciaire ne profite en général ni au locataire, ni au propriétaire.
-                    <br>
-                    <br>
-                    Le locataire voit sa dette de loyers augmenter inexorablement tout le temps que dure cette procédure
-                    alors qu’un aménagement rapide de cette dette aurait pu permettre d’éviter la saisine du Juge.
-                    <br>
-                    <br>
-                    Le propriétaire qui s’engage dans une procédure judiciaire d’expulsion voit lui-même cette dette
-                    locative augmenter inexorablement mais il doit attendre plusieurs mois avant d’obtenir une décision
-                    de justice l’autorisant à procéder à cette expulsion. Et une fois cette décision de justice obtenue,
-                    il lui faudra délivrer au locataire un commandement d’avoir à libérer les lieux, respecter la
-                    période de la trêve hivernale…
-                    <br>
-                    <br>
-                    Dans ces conditions, tant le locataire que le propriétaire ont intérêt à saisir un médiateur afin de
-                    tenter de régler amiablement le conflit qui les oppose.
-
+                    <div id="locataire" class="collapse">
+                        <div class="lead well">
+                            Le contentieux locatif représente une part importante des dossiers dont sont saisis les Tribunaux
+                            d’instance.
+                            <br>
+                            <br>
+                            La longueur de la procédure judiciaire ne profite en général ni au locataire, ni au propriétaire.
+                            <br>
+                            <br>
+                            Le locataire voit sa dette de loyers augmenter inexorablement tout le temps que dure cette procédure
+                            alors qu’un aménagement rapide de cette dette aurait pu permettre d’éviter la saisine du Juge.
+                            <br>
+                            <br>
+                            Le propriétaire qui s’engage dans une procédure judiciaire d’expulsion voit lui-même cette dette
+                            locative augmenter inexorablement mais il doit attendre plusieurs mois avant d’obtenir une décision
+                            de justice l’autorisant à procéder à cette expulsion. Et une fois cette décision de justice obtenue,
+                            il lui faudra délivrer au locataire un commandement d’avoir à libérer les lieux, respecter la
+                            période de la trêve hivernale…
+                            <br>
+                            <br>
+                            Dans ces conditions, tant le locataire que le propriétaire ont intérêt à saisir un médiateur afin de
+                            tenter de régler amiablement le conflit qui les oppose.
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
