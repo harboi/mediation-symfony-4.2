@@ -72,6 +72,10 @@ button.navbar-toggle:hover {
     font-size: 150%;
 }
 
+.size400percent {
+    font-size: 400%;
+}
+
 .white {
     color: white;
 }
