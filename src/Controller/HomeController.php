@@ -54,7 +54,7 @@ class HomeController  extends AbstractController
      */
     public function entreprise()
     {
-        return $this->render('entreprise.html.twig');
+        return $this->render('espace-entreprise.html.twig');
     }
 
     /**
