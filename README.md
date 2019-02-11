@@ -9,10 +9,10 @@
 - mettre en place le backoffice (gestion de l'entité Publication)
 - AU MENU :
   - PAGE D’ACCUEIL (dynamique) **[in progress : publications]**
-  - VOTRE MEDIATEUR **[DONE?]**
-  - MEDIATION VERSUS PROCEDURE JUDICIAIRE **[in progress]**
+  - VOTRE MEDIATEUR **[DONE]**
+  - MEDIATION VERSUS PROCEDURE JUDICIAIRE **[work on table presentation]**
   - ESPACE PARTICULIER **[in progress]**
-  - ESPACE ENTREPRISE
+  - ESPACE ENTREPRISE **[in progress]**
   - DEROULEMENT D’UNE MEDIATION
   - PUBLICATIONS (dynamique) + pages enfants
   - HONORAIRES
