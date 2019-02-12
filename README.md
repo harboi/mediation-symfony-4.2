@@ -10,12 +10,13 @@
 - AU MENU :
   - PAGE D’ACCUEIL (dynamique) **[in progress : publications]**
   - VOTRE MEDIATEUR **[DONE]**
-  - MEDIATION VERSUS PROCEDURE JUDICIAIRE **[work on table presentation]**
+  - MEDIATION VERSUS PROCEDURE JUDICIAIRE **[DONE]**
   - ESPACE PARTICULIER **[in progress]**
   - ESPACE ENTREPRISE **[in progress]**
-  - DEROULEMENT D’UNE MEDIATION
+  - DEROULEMENT D’UNE MEDIATION 
   - PUBLICATIONS (dynamique) + pages enfants
-  - HONORAIRES
+  - HONORAIRES **[in progress]**
   - CONTACT (statique + supprimer le formulaire sur le site avocat)
 - dynamique JS pour animer les éléments
 - corriger le menu (tout afficher à l'horizontal)
+- réduire / compresser les images jpg bandeau
