@@ -128,6 +128,10 @@ button.navbar-toggle:hover {
     margin-bottom: 40px;
 }
 
+ul li {
+    margin-bottom: 15px;
+}
+
 .matchHeight p.well {
     height: 100%;
 }
