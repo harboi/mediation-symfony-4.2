@@ -93,12 +93,12 @@
                 <h3 class="text-center blue">À qui s'adresse la médiation ?</h3>
                 <br>
                 <div class="col-sm-6 text-center">
-                    <a class="btn btn-lg text-center" href="javascript:$('#entreprise').collapse('toggle');">
+                    <a class="oval btn btn-lg text-center" href="javascript:$('#entreprise').collapse('toggle');">
                         <i class="fas fa-industry size300percent"></i>
                         <strong>VOUS ETES UNE ENTREPRISE </strong>
                     </a>
                     <div id="entreprise" class="collapse">
-                        <div class="lead well text-left">
+                        <div class="lead well text-left corner-rounded">
                             La médiation permet de régler :
                             <br>
                             <ul>
@@ -113,18 +113,18 @@
                             solutions
                             apaisées dans un cadre strictement confidentiel qui préserve l'image de l'entreprise.
                             <br>
-                            <a href="#">En savoir plus</a>
+                            <a href="{{ path('entreprise') }}">En savoir plus</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-sm-6 text-center">
-                    <a class="btn btn-lg" href="javascript:$('#particulier').collapse('toggle');">
+                    <a class="oval btn btn-lg" href="javascript:$('#particulier').collapse('toggle');">
                         <span class="glyphicon glyphicon-user" style="font-size: 270%;"></span>
                         <strong>VOUS ETES UN PARTICULIER</strong></a>
                     <br>
                     <div id="particulier" class="collapse">
-                        <div class="lead well text-left">
+                        <div class="lead well text-left corner-rounded">
                             Vous pouvez faire appel à un médiateur pour tout type de conflit né ou susceptible de
                             naître :
                             <br>
@@ -135,7 +135,7 @@
                                 <li>conflits avec votre propriétaire ou avec votre locataire</li>
                                 <li>...</li>
                             </ul>
-                            <a href="#">En savoir plus</a>
+                            <a href="{{ path('particulier') }}">En savoir plus</a>
                         </div>
                     </div>
                 </div>
