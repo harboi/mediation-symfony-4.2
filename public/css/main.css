@@ -42,6 +42,25 @@ h3 {
     font-weight: bold;
 }
 
+#linkbar {
+    margin: 0;
+}
+
+#linkbar a {
+    padding: 20px 10px;
+    line-height: 70px;
+    margin: 0;
+    font-size: 110%;
+    font-weight: bold;
+    color: #666666;
+}
+
+#linkbar a:hover {
+    background: #2c476d;
+    color: white;
+    text-decoration: none;
+}
+
 .navbar .navbar-nav > li > a:hover {
     background: #2c476d;
     color: white;

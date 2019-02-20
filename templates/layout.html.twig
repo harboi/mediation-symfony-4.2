@@ -38,7 +38,21 @@
                 </ul>
             </div>
         </div>
+        <div class="container-fluid">
+            <div id="linkbar" class="row text-center">
+                <a href="{{ path('index') }}">ACCUEIL</a>
+                <a href="{{ path('mediateur') }}">VOTRE MEDIATEUR</a>
+                <a href="{{ path('mediation-vs-procedure-judiciaire') }}">MEDIATION VERSUS PROCEDURE JUDICIAIRE</a>
+                <a href="{{ path('particulier') }}">ESPACE PARTICULIER</a>
+                <a href="{{ path('entreprise') }}">ESPACE ENTREPRISE</a>
+                <a href="{{ path('publications') }}">PUBLICATIONS</a>
+                <a href="{{ path('deroulement-mediation') }}">DEROULEMENT D'UNE MEDIATION</a>
+                <a href="{{ path('honoraires') }}">HONORAIRES</a>
+                <a href="{{ path('contact') }}">CONTACT</a>
+            </div>
+        </div>
     </nav>
+
 
     {% block content %}{% endblock %}
 
