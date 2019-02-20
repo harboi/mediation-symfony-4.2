@@ -76,6 +76,15 @@ class HomeController  extends AbstractController
     }
 
     /**
+     * @Route("/deroulement-mediation", name="deroulement-mediation")
+     * @return Response
+     */
+    public function deroulementMediation()
+    {
+        return $this->render('deroulement-mediation.html.twig');
+    }
+
+    /**
      * @Route("/contact", name="contact")
      * @return Response
      */
