@@ -47,12 +47,12 @@ h3 {
 }
 
 #linkbar a {
-    padding: 20px 10px;
-    line-height: 70px;
+    padding: 10px 5px;
+    line-height: 50px;
     margin: 0;
-    font-size: 110%;
     font-weight: bold;
     color: #666666;
+    letter-spacing: 0;
 }
 
 #linkbar a:hover {
@@ -115,15 +115,15 @@ button.navbar-toggle:hover {
 .oval {
     /*border-radius: 60px / 40px;*/
     border-radius: 50% / 50%;
-    padding:40px;
+    padding: 40px;
     background-color: #2c476d;
-    color:white;
+    color: white;
     width: 100%;
 }
 
 .oval:hover, .oval:focus {
-    background-color:inherit;
-    color:#4072ab;
+    background-color: inherit;
+    color: #4072ab;
 }
 
 .corner-rounded {
@@ -230,7 +230,7 @@ footer h4 {
 /* Landscape phones and portrait tablets */
 @media (max-width: 767px) {
     .navbar-logo {
-        height: 65px;
+        height: 110px;
         margin-left: 10px;
     }
 
@@ -285,5 +285,21 @@ blockquote {
 
     .navbar-header, .navbar-nav {
         float: none !important;
+    }
+}
+
+@media (max-width: 1280px) {
+    #linkbar {
+        display: none;
+    }
+}
+
+@media (min-width: 1280px) {
+    .navbar-toggle {
+        display: none !important;
+    }
+
+    .bg-cover {
+        background-position: top 160px right 50% !important;
     }
 }
