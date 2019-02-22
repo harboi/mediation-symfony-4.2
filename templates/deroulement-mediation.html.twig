@@ -1,13 +1,67 @@
 {% extends "layout.html.twig" %} {% block content %}
-    <div class="container-fluid bg-cover" style="height: 60% !important; background-image: url({{ asset('images/bandeau5.jpg') }})"></div>
-    <div class="container-fluid container-grey padding-50">
+    <div class="container-fluid padding-50">
         <div class="container">
             <div class="row lead">
                 <h4 class="text-center blue big">Déroulement d'une médiation</h4>
                 <br>
                 <br>
-                <img src="{{ asset('images/deroulement-mediation.png') }}" alt="déroulement d'une médiation"
-                     class="img-responsive" style="margin: 0 auto;">
+                <div class="col-md-6">
+                    <div class="text-center box-title">
+                        <strong>MÉDIATION JUDICIAIRE</strong>
+                        <br>
+                        Durée : 3 mois renouvelable
+                    </div>
+
+                    <br>
+
+                    <div class="text-center box">
+                        Décision du Juge constatant l'accord des parties et ordonnant une médiation
+                    </div>
+                    <div class="fleche"></div>
+                    <div class="text-center box">
+                        Consigation des frais de médiation par les parties dans le délai fixé par le juge et signature d'une convention de médiation
+                    </div>
+                    <div class="fleche"></div>
+                    <div class="text-center box">
+                        Une ou plusieurs réunions de médiations
+                    </div>
+                    <div class="fleche"></div>
+                    <div class="text-center box">
+                        - Accord total : les parties formalisent ou non leur accord et peuvent, si elles le souhaitent, le faire homologuer par le Juge
+                        <br>
+                        - Accord partiel : le juge statue sur les points restant en débat
+                        <br>
+                        - Aucun accord : la procédure reprend son cours normal devant le Juge
+                    </div>
+
+                </div>
+                <div class="col-md-6">
+                    <div class="text-center box-title" style="line-height: 54px;">
+                        <strong>MÉDIATION CONVENTIONELLE</strong>
+                    </div>
+
+                    <br>
+
+                    <div class="text-center box">
+                        Le médiateur est saisi directement par les parties
+                    </div>
+                    <div class="fleche"></div>
+                    <div class="text-center box">
+                        Signature d'une convention de médiation et paiement des frais de médiation par les parties
+                    </div>
+                    <div class="fleche"></div>
+                    <div class="text-center box">
+                        Une ou plusieurs réunions de médiation
+                    </div>
+                    <div class="fleche"></div>
+                    <div class="text-center box">
+                        - Accord total : les parties formalisent ou non leur accord et peuvent, si elles le souhaitent, le faire homologuer par le Juge
+                        <br>
+                        - Accord partiel : les parties sont libres des saisir le Juge sur les points restant en débat
+                        <br>
+                        - Aucun accord : les parties sont libres de saisir le Juge
+                    </div>
+                </div>
             </div>
         </div>
     </div>
