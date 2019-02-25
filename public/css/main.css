@@ -233,6 +233,10 @@ footer h4 {
     margin: 10px auto 60px auto;
 }
 
+ul.entreprise li {
+    margin-bottom:20px;
+}
+
 .fleche:after {
     left: 100%;
     top: 50%;
