@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Administration - Unis-vers-mediation</title>
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    {% block css %}{% endblock %}
+</head>
+
+<body>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{{ url('adminIndex') }}">Administration - Unis-vers-mediation</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{ url('adminIndex') }}">Index BackOffice</a></li>
+                <li><a href="{{ url('homepage') }}">Retour vers le site</a></li>
+                <li><a href="{{ path('app_logout') }}"><span class="glyphicon glyphicon-off" aria-hidden="true"></span></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12 main">
+            {% for label, flashes in app.session.flashbag.all %}
+                <div class="flash-message alert alert-{{ label }} alert-dismissable fade in" data-dismiss="alert" aria-label="Close" style="max-width: 500px;">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true" style="color:red;">×</span></button>
+                    {% for flash in flashes %}
+                        {{ flash }}<br/>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            {% block content %}{% endblock %}
+
+        </div>
+    </div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+{% block js %}{% endblock %}
+</body>
+</html>
