@@ -41,7 +41,7 @@ class AdminController extends AbstractController
             return new Response('Erreur côté serveur, contactez l\'administrateur', 500);
         }
 
-        return $this->render('admin/publications.html.twig', ['publications' => $list]);
+        return $this->render('Admin/publications.html.twig', ['publications' => $list]);
     }
 
 
