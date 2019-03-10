@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Publication;
+use App\Entity\Publication\Repository\Exception\PublicationNotFound;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -18,7 +20,17 @@ class HomeController  extends AbstractController
      */
     public function index(): Response
     {
-        return $this->render('index.html.twig');
+        /** @var  \App\Repository\PublicationRepository $repo */
+        $repo = $this->getDoctrine()->getManager()->getRepository(Publication::class);
+        try {
+            $list = $repo->getTwoLast();
+        } catch (PublicationNotFound $e) {
+            $list = null;
+        } catch (\Exception $e) {
+            return new Response('Erreur côté serveur, contactez l\'administrateur', 500);
+        }
+
+        return $this->render('index.html.twig', ['publications' => $list]);
     }
 
     /**
@@ -63,7 +75,41 @@ class HomeController  extends AbstractController
      */
     public function publications()
     {
-        return $this->render('publications.html.twig');
+        /** @var  \App\Repository\PublicationRepository $repo */
+        $repo = $this->getDoctrine()->getManager()->getRepository(Publication::class);
+        try {
+            $list = $repo->getList();
+        } catch (PublicationNotFound $e) {
+            $list = null;
+        } catch (\Exception $e) {
+            return new Response('Erreur côté serveur, contactez l\'administrateur', 500);
+        }
+
+        return $this->render('publications.html.twig', ['publications' => $list]);
+    }
+
+    /**
+     * @Route(
+     *       path         = "/publication/{id}",
+     *       name         = "publication",
+     *       requirements = { "id" = "[0-9]+" },
+     *       methods      = { "GET", "POST" }
+     * )
+     * @param $id
+     * @return \Symfony\Component\HttpFoundation\RedirectResponse|Response
+     */
+    public function showPublication($id)
+    {
+        try {
+            /** @var  \App\Repository\PublicationRepository $repo */
+            $repo = $this->getDoctrine()->getManager()->getRepository(Publication::class);
+            $publication = $repo->findById($id);
+        } catch (\Exception $e) {
+            $this->addFlash('error', 'Erreur : publication introuvable');
+            return $this->redirect($this->generateUrl('publications'));
+        }
+
+        return $this->render('publication.html.twig', ['publication' => $publication]);
     }
 
     /**

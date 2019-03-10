@@ -235,4 +235,40 @@
             </div>
         </div>
     </div>
+
+
+    <div class="container-fluid padding-50">
+        <div class="container">
+            <div class="row">
+                <h3 class="text-center blue">Dernières publications</h3>
+                <br>
+                <br>
+                {% if publications is defined %}
+                    {% for publication in publications %}
+                        <div class="col-sm-12 well" style="background-color: #f3f3f3">
+                            <h4 style="margin:0;">
+                                <small>{{ publication.publishedAt|date("d/m/Y") }}</small>
+                                &nbsp; &nbsp;
+                                <a href="{{ url('publication', {'id': publication.id}) }}">{{ publication.title|e }}</a>
+                                {% if app.user %}
+                                    {% if is_granted('ROLE_ADMIN') %}
+                                        <a href="{{ url('adminEditPublication', {'id': publication.id}) }}"
+                                           class="btn btn-primary">
+                                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Modifier
+                                        </a>
+                                        <a href="{{ url('adminDeletePublication', {'id': publication.id}) }}"
+                                           class="btn btn-xs btn-danger"
+                                           onclick="return confirm('Confirmer la suppression')">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                            Supprimer
+                                        </a>
+                                    {% endif %}
+                                {% endif %}
+                            </h4>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
 {% endblock %}

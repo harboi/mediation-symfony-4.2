@@ -1,0 +1,51 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <div class="container-fluid padding-50">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2 class="text-center blue">
+                        Publications
+                        {% if app.user %}
+                            {% if is_granted('ROLE_ADMIN') %}
+                                <a href="{{ url('adminAddPublication') }}" class="btn btn-sm btn-success">
+                                    <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Ajouter
+                                </a>
+                            {% endif %}
+                        {% endif %}
+                    </h2>
+                </div>
+            </div>
+
+            <div class="row" style="padding-bottom: 0; min-height: 300px;">
+                {% if publications is defined %}
+                    {% for publication in publications %}
+                        <div class="col-sm-12 well" style="background-color: #f3f3f3">
+                            <h4 style="margin:0;">
+                                <small>{{ publication.publishedAt|date("d/m/Y") }}</small>
+                                &nbsp; &nbsp;
+                                <a href="{{ url('publication', {'id': publication.id}) }}">{{ publication.title|e }}</a>
+                                {% if app.user %}
+                                    {% if is_granted('ROLE_ADMIN') %}
+                                        <a href="{{ url('adminEditPublication', {'id': publication.id}) }}"
+                                           class="btn btn-primary">
+                                            <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Modifier
+                                        </a>
+                                        <a href="{{ url('adminDeletePublication', {'id': publication.id}) }}"
+                                           class="btn btn-xs btn-danger"
+                                           onclick="return confirm('Confirmer la suppression')">
+                                            <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+                                            Supprimer
+                                        </a>
+                                    {% endif %}
+                                {% endif %}
+                            </h4>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+        </div>
+    </div>
+{% endblock %}

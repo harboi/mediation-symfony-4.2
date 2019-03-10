@@ -1,0 +1,30 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+    <div class="container">
+        <div class="row title">
+            <div class="col-md-12">
+                <br>
+                <br>
+                <h2 class="text-center blue">Publication</h2>
+            </div>
+        </div>
+
+
+        {% if publication is defined %}
+            <div class="row well" style="padding-bottom: 0; background-color: #f3f3f3;">
+                <div class="col-sm-12" style="padding-bottom: 0; color:gray">
+                    <h3 style="margin-left:-10px;">
+                        {% block title %}{{ publication.title }}{% endblock %}
+                        <small>{{ publication.publishedAt|date("d/m/Y") }}</small>
+                    </h3>
+                    <p class="lead text-justify">
+                        {{ publication.content|e|nl2br }}
+                    </p>
+                </div>
+            </div>
+        {% endif %}
+
+
+    </div>
+{% endblock %}
