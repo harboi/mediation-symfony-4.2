@@ -8,12 +8,10 @@
 
 namespace App\Repository;
 
-namespace App\Repository;
 use App\Entity\Publication;
 use App\Entity\Publication\Repository\Exception;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
-use Doctrine\ORM\Query;
 
 
 class PublicationRepository extends ServiceEntityRepository implements Publication\Repository
@@ -39,12 +37,27 @@ class PublicationRepository extends ServiceEntityRepository implements Publicati
     }
 
     /**
+     * @param int $limit
      * @return array of Publication
      * @throws Exception\PublicationNotFound
      */
-    public function getList()
+    public function getList($limit = 50)
     {
-        $publications = $this->findAll();
+        $publications = $this->findBy([], ['publishedAt' => 'DESC'], $limit, 0);
+        if (empty(array_filter($publications))) {
+            throw new Exception\PublicationNotFound;
+        }
+        return $publications;
+    }
+
+
+    /**
+     * @return array of Publication
+     * @throws Exception\PublicationNotFound
+     */
+    public function getTwoLast()
+    {
+        $publications = $this->findBy([], ['publishedAt' => 'DESC'], 2, 0);
         if (empty(array_filter($publications))) {
             throw new Exception\PublicationNotFound;
         }
