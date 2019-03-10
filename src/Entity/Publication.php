@@ -12,7 +12,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\PublicationRepository")
  * @ORM\Table(name="publication")
  */
 class Publication
@@ -63,7 +63,11 @@ class Publication
 
     public function __construct()
     {
-        $this->publishedAt = new \DateTime();
+        try {
+            $this->publishedAt = new \DateTime();
+        } catch (\Exception $e) {
+            $this->publishedAt = null;
+        }
     }
 
     /**
@@ -77,7 +81,7 @@ class Publication
     /**
      * @return string
      */
-    public function getTitle(): string
+    public function getTitle()
     {
         return $this->title;
     }
@@ -93,7 +97,7 @@ class Publication
     /**
      * @return string
      */
-    public function getContent(): string
+    public function getContent()
     {
         return $this->content;
     }
@@ -109,7 +113,7 @@ class Publication
     /**
      * @return \DateTime
      */
-    public function getPublishedAt(): \DateTime
+    public function getPublishedAt()
     {
         return $this->publishedAt;
     }
