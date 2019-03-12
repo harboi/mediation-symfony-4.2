@@ -207,11 +207,12 @@
         </div>
     </div>
 
-    <div class="container-fluid padding-50">
+    <div class="container-fluid">
         <div class="container">
             <div class="row">
-                <h3 class="text-center blue">La médiation, COMBIEN cela coûte ?</h3>
                 <br>
+                <br>
+                <h3 class="text-center blue">La médiation, COMBIEN cela coûte ?</h3>
                 <br>
                 <p class="lead text-justify">
                     La médiation s’adapte à vos besoins et à vos moyens.
@@ -237,11 +238,10 @@
     </div>
 
 
-    <div class="container-fluid padding-50">
+    <div class="container-fluid">
         <div class="container">
             <div class="row">
                 <h3 class="text-center blue">Dernières publications</h3>
-                <br>
                 <br>
                 {% if publications is defined %}
                     {% for publication in publications %}
@@ -267,6 +267,9 @@
                             </h4>
                         </div>
                     {% endfor %}
+                    <div class="text-right" >
+                        <a class="big" href="{{ path('publications') }}">Voir toutes les publications</a>
+                    </div>
                 {% endif %}
             </div>
         </div>
