@@ -334,7 +334,7 @@ blockquote {
     }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
     #linkbar {
         display: none;
     }
